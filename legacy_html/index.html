@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younes | Graphique & Web Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar">
+                <img src="https://res.cloudinary.com/dsy6m5omi/image/upload/v1775652676/younes_ait_hajoub_lcoh5j.jpg"
+                    alt="Younes">
+            </div>
+            <div class="intro">
+                <div class="wrapper">
+                    <h1>Younes Ait Hajoub</h1>
+                    <p>Graphique & Web Designer</p>
+                </div>
+                <div class="cta">
+                    <a href="#download-cv" class="btn">Télécharger le CV</a>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><button class="nav-link" id="about">À propos</button></li>
+                <li><button class="nav-link active" id="projects">Projets</button></li>
+                <li><button class="nav-link" id="about">À propos</button></li>
+                <li><button class="nav-link" id="contact">Contact</button></li>
+            </ul>
+        </nav>
+        <main id="main_content">
+            <section id="projects">
+                <script>
+                    data.projects.forEach(project => {
+                        document.write(`
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="${project.cover}" alt="${project.title}">
+                            </div>
+                            <h2>${project.title}</h2>
+                            <p>${project.subtitle}</p>
+                            <p class="project-description">${project.description}</p>
+                            <button class="btn" id="${project.id}" target="_blank">Voir le projet</button>
+                        </div>
+                        `);
+                    });
+                </script>
+                <div class="project-modal">
+                    <div class="project-container">
+                        <div class="modal-header">
+                            <h1 id="project_title">Titre de projet</h1>
+                            <button id="modal_close" class="modal-close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--text-color)"
+                                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <p id="descrption">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi inventore fuga
+                                distinctio
+                                voluptas, iure itaque saepe delectus animi sapiente sunt.
+                            </p>
+                            <img src="https://res.cloudinary.com/dsy6m5omi/image/upload/v1775661505/project01_cover2_x62nlw.jpg"
+                                id="projet_cover">
+                            <div class="wrapper">
+                                <h2>Problem</h2>
+                                <p id="problem">
+                                    Le lycée gérait les absences via des registres papier — un processus lent, sujet aux
+                                    erreurs et sans visibilité pour les étudiants. Avec 4 filières distinctes, la
+                                    consolidation des données devenait un défi quotidien pour l'administration.
+                                </p>
+                            </div>
+                            <div class="wrapper">
+                                <h2>Solution</h2>
+                                <p id="solution">
+                                    Une plateforme web centralisée avec 3 rôles — étudiant, enseignant, administrateur.
+                                    Saisie des absences en temps réel, génération de rapports automatiques, alertes par
+                                    email et tableau de bord statistique.
+                                </p>
+                            </div>
+                            <div class="wrapper" id="visuels">
+                                <div class="images">
+                                    <img src="https://res.cloudinary.com/dsy6m5omi/image/upload/v1775655550/project01_cover_u9rcta.jpg"
+                                        alt="projet cover" id="projet_cover">
+                                    <img src="https://res.cloudinary.com/dsy6m5omi/image/upload/v1775655550/project01_cover_u9rcta.jpg"
+                                        alt="projet cover" id="projet_cover">
+                                    <img src="https://res.cloudinary.com/dsy6m5omi/image/upload/v1775655550/project01_cover_u9rcta.jpg"
+                                        alt="projet cover" id="projet_cover">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Younes Ait Hajoub. Tous droits réservés.</p>
+        </footer>
+    </div>
+    script
+    <script src="script.js"></script>
+</body>
+
+</html>
